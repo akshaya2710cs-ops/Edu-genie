@@ -1,0 +1,38 @@
+:root {
+  --bg: #f4f6fb; --card: #fff; --text: #1f2937; --muted: #6b7280;
+  --primary: #4f46e5; --primary-dark: #4338ca; --ok: #16a34a; --bad: #dc2626;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.hero { text-align: center; padding: 40px 16px 60px; color: #fff;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+.hero h1 { margin: 0 0 6px; font-size: 2.4rem; }
+.hero p { margin: 0; opacity: .9; }
+.card { max-width: 780px; margin: -36px auto 24px; padding: 24px; background: var(--card);
+  border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+label { display: block; font-weight: 600; margin: 14px 0 6px; }
+select, textarea { width: 100%; padding: 12px; font-size: 1rem; border: 1px solid #d1d5db;
+  border-radius: 10px; font-family: inherit; }
+select:focus, textarea:focus { outline: 2px solid var(--primary); border-color: transparent; }
+textarea { resize: vertical; }
+button { margin-top: 16px; width: 100%; padding: 13px; font-size: 1rem; font-weight: 600;
+  color: #fff; background: var(--primary); border: 0; border-radius: 10px; cursor: pointer; }
+button:hover { background: var(--primary-dark); }
+button:disabled { opacity: .6; cursor: not-allowed; }
+.hidden { display: none; }
+.loader { margin-top: 16px; color: var(--muted); text-align: center; }
+.error { margin-top: 16px; padding: 12px; border-radius: 10px; background: #fef2f2; color: var(--bad); }
+.result { margin-top: 20px; padding: 18px; background: #f9fafb; border-radius: 12px; line-height: 1.6; }
+.result h3 { margin: 14px 0 6px; }
+.result ul { padding-left: 22px; }
+.q { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+.q p { margin: 0 0 10px; font-weight: 600; }
+.opt { display: block; width: 100%; text-align: left; margin: 6px 0; padding: 10px 12px;
+  background: #fff; color: var(--text); border: 1px solid #d1d5db; font-weight: 400; }
+.opt:hover { background: #eef2ff; }
+.opt.correct { background: #dcfce7; border-color: var(--ok); }
+.opt.wrong { background: #fee2e2; border-color: var(--bad); }
+.feedback { margin-top: 8px; font-size: .95rem; }
+.score { font-weight: 700; text-align: center; margin-top: 8px; }
+footer { text-align: center; color: var(--muted); padding: 20px; font-size: .9rem; }
+@media (max-width: 600px) { .card { margin: -30px 12px 20px; padding: 16px; } }
